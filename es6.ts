@@ -16,7 +16,7 @@ const setupDB = async () => {
         stock_count INTEGER
     );`);
 
-    await db.none(`GRANT UPDATE, SELECT ON books TO 'martin'@localhost `);
+    await db.none(`REVOKE UPDATE ON books TO 'martin'@localhost `);
 };
 
 setupDB();
