@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon es1.ts"
+    "dev": "nodemon es2.ts"
   },
   "author": "Alessandro Ambra",
   "license": "ISC",
