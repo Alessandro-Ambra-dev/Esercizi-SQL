@@ -15,7 +15,8 @@ const setupDB = async () => {
         rating FLOAT,
         stock_count INTEGER
     );`);
-    await db.none(`UPDATE books set price='9.99', stock_count='4' WHERE book_id=2`)
+
+    await db.none(`GRANT UPDATE, SELECT ON books TO 'martin'@localhost `);
 };
 
 setupDB();
