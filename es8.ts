@@ -17,8 +17,8 @@ const setupDB = async () => {
     );`);
 
   await db.none(`BEGIN TRANSACTION;
-    DELETE FROM books WHERE book_id=2;
-    COMMIT `);
+    DELETE FROM books WHERE book_id=3;
+    ROLLBACK `);
 };
 
 setupDB();
