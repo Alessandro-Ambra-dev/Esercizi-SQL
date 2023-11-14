@@ -16,7 +16,9 @@ const setupDB = async () => {
         stock_count INTEGER
     );`);
 
-    await db.none(`REVOKe UPDATE ON books TO 'martin'@localhost `);
+  await db.none(`BEGIN TRANSACTION;
+    DELETE FROM books WHERE book_id=2;
+    COMMIT `);
 };
 
 setupDB();
